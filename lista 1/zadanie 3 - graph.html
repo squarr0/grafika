@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafika Żółwia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="graphCanvas" width="800" height="600"></canvas>
+    <input type="number" id="nInput" placeholder="Wprowadź n" min="1">
+    <input type="number" id="mInput" placeholder="Wprowadź m" min="1">
+    <button onclick="drawCompleteGraph(getElementById('nInput').value)">Rysuj Graf Pełny</button>
+    <button onclick="drawBipartiteGraph(getElementById('nInput').value, getElementById('mInput').value)">Rysuj Graf Dwudzielny Pełny</button>
+    <script src="graph.js"></script>
+</body>
+</html>
