@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>L-systemy</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="turtleCanvas" width="800" height="600"></canvas>
+    <br>
+    <label for="fractalSelect">Wybierz fraktal:</label>
+    <select id="fractalSelect">
+        <option value="algae">Wzrost Alg</option>
+        <option value="kochCurve">Krzywa Kocha</option>
+        <option value="cantorSet">Zbiór Cantora</option>
+    </select>
+    <br>
+    <label for="iterations">Ilość iteracji:</label>
+    <input type="number" id="iterations" value="4">
+    <button onclick="drawSelectedFractal()">Rysuj</button>
+
+    <script src="turtle.js"></script> 
+    <script src="l-systems.js"></script>
+    <script>
+        const canvas = document.getElementById('turtleCanvas');
+        const ctx = canvas.getContext('2d');
+        const turtle = new Turtle(400, 300, 0, ctx);
+        turtle.penDown()
+    </script>
+</body>
+</html>
